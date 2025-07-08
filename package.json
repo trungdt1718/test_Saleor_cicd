@@ -16,7 +16,10 @@
     "test:cucumber:products:layout": "cucumber-js --format progress --format html:results/cucumber-report.html --tags '@layout'",
     "test:cucumber:products:accessibility": "cucumber-js --format progress --format html:results/cucumber-report.html --tags '@accessibility'",
     "test:cucumber:products:responsive": "cucumber-js --format progress --format html:results/cucumber-report.html --tags '@responsive'",
-    "test:all": "npm run test && npm run test:cucumber"
+    "test:all": "npm run test && npm run test:cucumber",
+    "test:with-success-rate": "playwright test && node scripts/check-test-success-rate.js",
+    "test:with-success-rate:80": "playwright test && node scripts/check-test-success-rate.js 80",
+    "test:with-success-rate:90": "playwright test && node scripts/check-test-success-rate.js 90"
   },
   "keywords": [],
   "author": "",
